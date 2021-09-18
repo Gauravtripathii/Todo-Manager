@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block title %}{% endblock %}
+	</title>
+
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+
+</head>
+<body>
+
+<div class="outer">
+
+<header>
+
+<div class="hcontainer">
+<div id="branding">
+<h1> <span>Todos</span> Manager </h1>
+</div>
+
+<nav>
+
+<ul>
+
+
+
+{% if user.is_authenticated %}
+<li class="current"> <a href="/home">
+	Home
+</a>
+</li>
+
+<li class="current"> <a href="/add-todo">
+	Add Todo
+</a>
+</li>
+
+</li>
+
+<li class="current"> <a href="/logout">
+	Logout
+</a>
+</li>
+{% else %}
+
+</li>
+<li class="current"> <a href="/sign-up">
+	Sign up
+</a>
+</li>
+
+</li>
+
+<li class="current"> <a href="/login">
+	Login
+</a>
+</li>
+{% endif %}
+
+
+</ul>
+
+</nav>
+
+</div>
+</header>
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				{{msg}}
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+
+
+
+
+
+
+	<div class="container">
+
+		<div class="leftbar">
+
+{% block leftbar %}
+
+{% if user.is_authenticated %}
+
+<h2>
+	Welcome, {{user.username.capitalize()}}
+</h2>
+
+{% endif %}
+
+{% endblock %}
+		</div>
+
+
+		<div class = 'rightbar'>
+			<br/>
+			<br/>
+			{% block content %}{% endblock %}
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<footer>
+	
+	<p> Todos Manager, Copyright &copy; 2021 </p>
+
+	</footer>
+</div>
+</body>
+</html>

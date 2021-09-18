@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} Sign-up Page {% endblock %}
+{% block content %}
+
+	<form action='#' method = 'POST'>
+
+		<p> <input type="text" name = 'username' placeholder="Enter a username"/> </p>
+		<p> <input type="text" name = 'email' placeholder="Enter your email"/> </p>
+		<p> <input type="password" name = 'password1' placeholder="Set a password"/> </p>
+		<p> <input type="password" name = 'password2' placeholder="Confirm password"/> </p>
+		<p> <input type="submit" value = 'Sign-up' class = 'sub' /> </p>
+
+	</form>
+
+{% endblock %}

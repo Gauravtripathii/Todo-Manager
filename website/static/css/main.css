@@ -1,0 +1,124 @@
+.hcontainer{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+/*main header content*/
+
+header{
+	background: #35424a;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+}
+
+header a{
+	color: #ffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding{
+	float: left;
+}
+
+header #branding h1{
+	margin: 0;
+}
+
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+
+header .highlight, header .current a{
+	color: #e8491d;
+	font-weight: bold;
+}
+
+header a:hover{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/*For Footer*/
+
+footer{
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+	background-color: #e8491d;
+	text-align: center;
+	width: 100%;
+}
+
+/* for main content */
+
+.outer{
+	/*width: 1100px;
+	height: 650px;*/
+	background: #ede7e6;
+	/*background: black;*/
+	/*margin: auto;*/
+}
+
+.leftbar{
+	height: 100%;
+	width: 30%;
+	/*background: orange;*/
+	float: left;
+	/*border-right: 1px solid red;*/
+}
+
+.rightbar{
+	height: 100%;
+	width: 70%;
+	/*background: pink;*/
+	float: right;
+	/*border-left: 1px solid red;*/
+}
+
+/*forms*/
+
+.sub{
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition-duration: 0.2s;
+}
+
+.sub:hover{
+	background-color: white;
+	color: #4CAF50;
+	border: 2px solid green;
+}
+
+input{
+	transition: width 0.4s ease-in-out;
+}
+
+input:focus{
+	/*width: 65%;*/
+	background-color: pink;
+}
